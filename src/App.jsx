@@ -1,6 +1,7 @@
 import "./App.css";
 import User from "./compnents/User";
 import ProductList from "./compnents/ProductList";
+import Button from "./compnents/Button";
 
 const Users = [
   {
@@ -38,6 +39,8 @@ function App() {
       <User {...Users[2]} />
       <User {...Users[3]} />
       <ProductList products={products} />
+      <Button label="cancle" />
+      <Button label="submit" />
     </>
   );
 }
