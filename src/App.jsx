@@ -42,6 +42,7 @@ function App() {
       <ProductList products={products} />
       <Button label="cancle" />
       <Button label="submit" />
+      <h1>Conditional Rendering Example</h1>
       <StatusMessage isLoggedIn={true} />
       <StatusMessage isLoggedIn={false} />
     </>
