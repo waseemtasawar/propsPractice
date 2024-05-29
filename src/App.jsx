@@ -2,6 +2,7 @@ import "./App.css";
 import User from "./compnents/User";
 import ProductList from "./compnents/ProductList";
 import Button from "./compnents/Button";
+import StatusMessage from "./compnents/StatusMessage";
 
 const Users = [
   {
@@ -41,6 +42,8 @@ function App() {
       <ProductList products={products} />
       <Button label="cancle" />
       <Button label="submit" />
+      <StatusMessage isLoggedIn={true} />
+      <StatusMessage isLoggedIn={false} />
     </>
   );
 }
