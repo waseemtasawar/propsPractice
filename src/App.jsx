@@ -1,5 +1,6 @@
 import "./App.css";
 import User from "./compnents/User";
+import ProductList from "./compnents/ProductList";
 
 const Users = [
   {
@@ -23,6 +24,12 @@ const Users = [
     email: "hammad@gmail.com",
   },
 ];
+
+const products = [
+  { name: "Product 1", price: 29.99, description: "This is product 1" },
+  { name: "Product 2", price: 39.99, description: "This is product 2" },
+  { name: "Product 3", price: 19.99, description: "This is product 3" },
+];
 function App() {
   return (
     <>
@@ -30,6 +37,7 @@ function App() {
       <User {...Users[1]} />
       <User {...Users[2]} />
       <User {...Users[3]} />
+      <ProductList products={products} />
     </>
   );
 }
