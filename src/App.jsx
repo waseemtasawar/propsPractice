@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import User from "./compnents/User";
 
+const Users = [
+  {
+    name: "Waseem",
+    age: 24,
+    email: "waseem@gmail.com",
+  },
+  {
+    name: "Tooba",
+    age: 21,
+    email: "tooba@gmail.com",
+  },
+  {
+    name: "Hashim",
+    age: 23,
+    email: "hashim@gmail.com",
+  },
+  {
+    name: "Hammad",
+    age: 22,
+    email: "hammad@gmail.com",
+  },
+];
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <User {...Users[0]} />
+      <User {...Users[1]} />
+      <User {...Users[2]} />
+      <User {...Users[3]} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
