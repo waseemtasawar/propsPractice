@@ -3,6 +3,7 @@ import User from "./compnents/User";
 import ProductList from "./compnents/ProductList";
 import Button from "./compnents/Button";
 import StatusMessage from "./compnents/StatusMessage";
+import PracticeUseEffect from "./compnents/PracticeUseEffect";
 
 const Users = [
   {
@@ -45,6 +46,7 @@ function App() {
       <h1>Conditional Rendering Example</h1>
       <StatusMessage isLoggedIn={true} />
       <StatusMessage isLoggedIn={false} />
+      <PracticeUseEffect />
     </>
   );
 }

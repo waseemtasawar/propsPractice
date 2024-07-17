@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 const PracticeUseEffect = () => {
-  const [count, setCount] = useState(0);
+  const [data, setData] = useState(null);
 
-  function Incriment() {
-    setCount(count + 1);
-  }
-  function Incriment() {
-    setCount(count - 1);
-  }
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.json())
+      .then((result) => setData(result))
+      .catch((error) => console.error("Error fatching data", error));
+  }, []);
   return (
     <div>
-      <h1>count is {count}</h1>
-      <button onClick={Incriment}>Incriment</button>
-      <button onClick={Decrement}>Decrement</button>
+      {data ? (
+        <ul>
+          {data.map((item) => (
+            <li key={item.name}>{item.name}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading ......</p>
+      )}
     </div>
   );
 };
